@@ -8,6 +8,9 @@ import Question from "./components/Question";
 import NextButton from "./components/NextButton";
 import Progress from "./components/Progress";
 import FinishedScreen from "./components/FinishedScreen";
+import Timer from "./components/Timer";
+
+const SECS_PER_QUESTION = 45;
 
 const initialState = {
   questions: [],
@@ -18,6 +21,7 @@ const initialState = {
   answer: null,
   points: 0,
   highscore: 0,
+  secRemaining: null,
 };
 
 const reducer = (state, action) => {
@@ -25,7 +29,12 @@ const reducer = (state, action) => {
     case "dataLoading":
       return { ...state, status: "loading" };
     case "dataRecieved":
-      return { ...state, status: "ready", questions: action.payload };
+      return {
+        ...state,
+        status: "ready",
+        questions: action.payload.questions,
+        secRemaining: 15 * SECS_PER_QUESTION,
+      };
 
     case "error":
       return { ...state, status: "error" };
@@ -51,7 +60,13 @@ const reducer = (state, action) => {
           state.points > state.highscore ? state.points : state.highscore,
       };
     case "restart":
-      return { initialState, status: "restart" };
+      return { ...initialState, questions: state.questions, status: "ready" };
+    case "tick":
+      return {
+        ...state,
+        secRemaining: state.secRemaining - 1,
+        status: state.secRemaining === 0 ? "finish" : state.status,
+      };
     default:
       throw new Error("unknow action");
   }
@@ -60,7 +75,9 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const { questions, status, index, answer, points, highscore } = state;
+  const { questions, status, index, answer, points, highscore, secRemaining } =
+    state;
+  console.log(secRemaining);
   const maxPossiblePoints = questions.reduce(
     (prev, cur) => prev + cur.points,
     0
@@ -69,10 +86,13 @@ function App() {
     const getData = async () => {
       try {
         dispatch({ type: "dataLoading" });
-        const response = await fetch("http://localhost:5000/questions");
+        const response = await fetch(
+          "https://raw.githubusercontent.com/MahmoudKhalid22/Kartech-internship/main/quiz-app/data/questions.json"
+        );
         const data = await response.json();
+        // console.log(data);
         dispatch({ type: "dataRecieved", payload: data });
-        console.log(data);
+        // console.log(data);
       } catch (err) {
         dispatch({ type: "error" });
         console.log(err);
@@ -108,13 +128,15 @@ function App() {
               dispatch={dispatch}
               answer={answer}
             />
-
-            <NextButton
-              dispatch={dispatch}
-              answer={answer}
-              index={index}
-              length={questions.length}
-            />
+            <footer>
+              <Timer dispatch={dispatch} secondsRemaining={secRemaining} />
+              <NextButton
+                dispatch={dispatch}
+                answer={answer}
+                index={index}
+                length={questions.length}
+              />
+            </footer>
           </>
         )}
         {status === "finish" && (

@@ -137,10 +137,15 @@ progress {
 .btn {
   margin: 2rem auto;
 }
-.next {
-  margin-left: auto;
-  margin-right: 38.5rem;
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
 }
+/* .next {
+  float: right;
+} */
 .btn:not([disabled]):hover,
 .next:not([disabled]):hover {
   background-color: var(--color-darkest);
