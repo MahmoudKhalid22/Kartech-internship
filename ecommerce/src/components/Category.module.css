@@ -1,0 +1,14 @@
+.cart {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: #4c2618;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cart:hover {
+  background-color: #331910;
+}
