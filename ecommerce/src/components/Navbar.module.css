@@ -23,8 +23,9 @@ nav ul {
 }
 nav a {
   text-decoration: none;
-  color: #444;
+  color: #994c30;
   font-size: 1.25rem;
+  font-weight: 600;
 }
 nav button {
   display: none;
@@ -41,7 +42,7 @@ nav button {
     padding: 1rem;
     align-items: flex-start;
     width: 8rem;
-    height: 100vh;
+    height: 20rem;
     justify-content: flex-start;
   }
   nav ul li > a {

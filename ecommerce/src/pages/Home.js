@@ -19,7 +19,7 @@ function Home() {
         <Link to="/products">Go to Products</Link>
       </div>
       <div className={styles.image}>
-        <img src={bg} alt="bg" />
+        <img src={bg} alt="bg" loading="lazy" />
       </div>
     </div>
   );

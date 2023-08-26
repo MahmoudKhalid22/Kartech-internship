@@ -1,18 +1,24 @@
-import { useEffect } from "react";
+import { useGetAllProductsQuery } from "../features/productsApi";
+import ProductItem from "../components/ProductItem";
+import styles from "./Products.module.css";
 
 function Products() {
-  useEffect(() => {
-    const getData = async () => {
-      const res = await fetch("http://localhost:5000/products");
-      const data = await res.json();
-      console.log(data);
-    };
-    getData();
-  
-  });
+  const { data, error, isLoading } = useGetAllProductsQuery();
   return (
-    <div>Products</div>
-  )
+    <div className={styles.container}>
+      {isLoading ? (
+        <h3 className={styles.loading}>Loading...</h3>
+      ) : error ? (
+        <h3 className={styles.error}>An error occuered!</h3>
+      ) : (
+        <div className={styles.products}>
+          {data?.map((product) => (
+            <ProductItem product={product} key={product.id} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Products;

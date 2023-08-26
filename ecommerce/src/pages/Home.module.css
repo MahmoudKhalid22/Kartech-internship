@@ -26,3 +26,25 @@
   font-size: 1.2rem;
   line-height: 1.1;
 }
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .image {
+    width: 80%;
+    margin: 0 auto;
+    height: 60%;
+  }
+  .description {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+  }
+  .description h1 {
+    font-size: 1.5rem;
+  }
+
+  .description p {
+    display: none;
+  }
+}

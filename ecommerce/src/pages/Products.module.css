@@ -1,0 +1,20 @@
+.loading,
+.error {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+.loading {
+  color: #ff7f50;
+}
+.error {
+  color: #ff3333;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

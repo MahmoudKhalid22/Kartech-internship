@@ -4,120 +4,140 @@
       "id": "01a",
       "name": "Rose",
       "description": "The timeless beauty of roses brings elegance and romance to any garden or bouquet. Choose from a variety of colors and fragrances to express your love and admiration.",
+      "price": 35,
       "image": "../assets/Rose.jpg"
     },
     {
       "id": "02b",
       "name": "Sunflower",
       "description": "Bright and cheerful, sunflowers are a symbol of happiness and positivity. Their large, vibrant blooms make a stunning addition to any garden or floral arrangement.",
+      "price": 37,
       "image": "../assets/Sunflower.jpg"
     },
     {
       "id": "03c",
       "name": "Tulip",
       "description": "Delicate and graceful, tulips come in a wide range of colors and are known for their elegant simplicity. They bring a touch of sophistication to any space.",
+      "price": 30,
       "image": "../assets/Tulip.jpg"
     },
     {
       "id": "04d",
       "name": "Orchid",
       "description": "Exotic and captivating, orchids are renowned for their stunning and intricate blooms. These elegant plants add a touch of luxury and beauty to any home or office.",
+      "price": 32,
       "image": "../assets/Orchid.jpg"
     },
     {
       "id": "05e",
       "name": "Lavender",
       "description": "With its soothing fragrance and beautiful purple flowers, lavender is a popular choice for aromatherapy and relaxation. It's also a lovely addition to gardens and bouquets.",
+      "price": 27,
       "image": "../assets/Lavender.jpg"
     },
     {
       "id": "06f",
       "name": "Jasmine",
       "description": "Known for its intoxicating fragrance, jasmine is a climbing vine that produces delicate white flowers. It's perfect for adding a touch of romance and enchantment to any garden.",
+      "price": 25,
       "image": "../assets/Jasmine.jpg"
     },
     {
       "id": "07g",
       "name": "Lily",
       "description": "Majestic and elegant, lilies are known for their large, showy blooms and sweet fragrance. They make a striking statement in gardens and bouquets alike.",
+      "price": 30,
       "image": "../assets/Lily.jpg"
     },
     {
       "id": "08h",
       "name": "Daffodil",
       "description": "A harbinger of spring, daffodils bring a burst of sunshine with their bright yellow or white flowers. They symbolize new beginnings and are a delight to behold.",
+      "price": 22,
       "image": "../assets/Daffodil.jpg"
     },
     {
       "id": "09i",
       "name": "Peony",
       "description": "With their lush, full blooms and delightful fragrance, peonies are a favorite among flower enthusiasts. They add a touch of elegance and charm to any garden or floral arrangement.",
+      "price": 35,
       "image": "../assets/Peony.jpg"
     },
     {
       "id": "10j",
       "name": "Marigold",
       "description": "Vibrant and cheerful, marigolds are known for their bold colors and ability to repel pests. They are a popular choice for adding a pop of color to gardens and containers.",
+      "price": 20,
       "image": "../assets/Marigold.jpg"
     },
     {
       "id": "11k",
       "name": "Pansy",
       "description": "With their charming \"faces\" and wide range of colors, pansies are a delightful addition to any garden or window box. They bring joy and cheerfulness to any space.",
+      "price": 10,
       "image": "../assets/Pansy.jpg"
     },
     {
       "id": "12l",
       "name": "Geranium",
       "description": "Versatile and easy to care for, geraniums are known for their vibrant blooms and attractive foliage. They are a popular choice for adding color to gardens and containers.",
+      "price": 5,
       "image": "../assets/Geranium.jpg"
     },
     {
       "id": "13m",
       "name": "Carnation",
       "description": "With their ruffled petals and sweet fragrance, carnations are a classic choice for bouquets and floral arrangements. They come in a variety of colors and symbolize love and admiration.",
+      "price": 7,
       "image": "../assets/Carnation.jpg"
     },
     {
       "id": "14n",
       "name": "Hydrangea",
       "description": "Known for their large, showy flower heads, hydrangeas are a stunning addition to gardens and landscapes. They come in a range of colors and add a touch of elegance to any setting.",
+      "price": 17,
       "image": "../assets/Hydrangea.jpg"
     },
     {
       "id": "15o",
       "name": "Iris",
       "description": "Graceful and elegant, irises are known for their striking blooms and vibrant colors. They bring a touch of sophistication and beauty to gardens and bouquets.",
+      "price": 14,
       "image": "../assets/Iris.jpg"
     },
     {
       "id": "16p",
       "name": "Dahlia",
       "description": "With their intricate and diverse blooms, dahlias are a favorite among flower enthusiasts. They come in a wide range of colors and add drama and beauty to any garden or arrangement.",
+      "price": 25,
       "image": "../assets/Dahlia.jpg"
     },
     {
       "id": "17q",
       "name": "Violet",
       "description": "Delicate and charming, violets are known for their dainty flowers and sweet fragrance. They are a lovely choice for adding a touch of whimsy to gardens and containers.",
+      "price": 27,
       "image": "../assets/Violet.jpg"
     },
     {
       "id": "18r",
       "name": "Petunia",
       "description": "Versatile and easy to grow, petunias are known for their profusion of colorful blooms. They are a popular choice for adding vibrant splashes of color to gardens and hanging baskets.",
+      "price": 20,
       "image": "../assets/Petunia.jpg"
     },
     {
       "id": "19s",
       "name": "Chrysanthemum",
       "description": "With their abundant and long-lasting blooms, chrysanthemums are a symbol of autumn and are often associated with festivals and celebrations. They bring beauty and joy to any setting.",
+      "price": 15,
       "image": "../assets/Chrysanthemum.jpg"
     },
     {
       "id": "20t",
       "name": "Aloe vera",
       "description": "Known for its medicinal properties, aloe vera is a succulent plant with thick, fleshy leaves. It's popular for its soothing gel and is a great addition to any indoor garden or skincare routine.",
+      "price": 19,
       "image": "../assets/Aloevera.jpg"
     }
   ]
