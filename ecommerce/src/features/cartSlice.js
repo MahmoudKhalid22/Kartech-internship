@@ -26,7 +26,7 @@ const cartSlice = createSlice({
       } else {
         const tempProduct = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProduct);
-        toast.success(`added a new ${action.payload.name} to cart`, {
+        toast.success(`a new ${action.payload.name} added to cart`, {
           position: "bottom-left",
         });
       }
@@ -37,9 +37,29 @@ const cartSlice = createSlice({
         (item) => item.id !== action.payload.id
       );
       state.cartItems = newCart;
-      toast.error(`${action.payload} removed from cart`, {
+      toast.error(`${action.payload.name} removed from cart`, {
         position: "bottom-left",
       });
+      localStorage.setItem("cartItem", JSON.stringify(state.cartItems));
+    },
+    decreaseCart(state, action) {
+      const decreasedCart = state.cartItems.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (state.cartItems[decreasedCart].cartQuantity > 1) {
+        state.cartItems[decreasedCart].cartQuantity -= 1;
+        toast.info(`${action.payload.name} decreased by 1`, {
+          position: "bottom-left",
+        });
+      } else if (state.cartItems[decreasedCart].cartQuantity === 1) {
+        const newCart = state.cartItems.filter(
+          (item) => item.id !== action.payload.id
+        );
+        state.cartItems = newCart;
+        toast.error(`${action.payload.name} removed from cart`, {
+          position: "bottom-left",
+        });
+      }
       localStorage.setItem("cartItem", JSON.stringify(state.cartItems));
     },
 
@@ -53,5 +73,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, decreaseCart, clearCart } =
+  cartSlice.actions;
 export default cartSlice.reducer;

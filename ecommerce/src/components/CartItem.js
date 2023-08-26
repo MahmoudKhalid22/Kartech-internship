@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../features/cartSlice";
+import { addToCart, decreaseCart, removeFromCart } from "../features/cartSlice";
 import styles from "./CartItem.module.css";
 
 function CartItem({ data }) {
@@ -7,6 +7,12 @@ function CartItem({ data }) {
 
   const handleRemove = (product) => {
     dispatch(removeFromCart(product));
+  };
+  const handleDecreaseItem = (product) => {
+    dispatch(decreaseCart(product));
+  };
+  const handleIncreaseItem = (product) => {
+    dispatch(addToCart(product));
   };
 
   return (
@@ -21,9 +27,9 @@ function CartItem({ data }) {
         <div className={styles.bottom}>
           <p>${data.price}</p>
           <div className={styles.btns}>
-            <button>-</button>
+            <button onClick={() => handleDecreaseItem(data)}>-</button>
             <span>{data.cartQuantity}</span>
-            <button>+</button>
+            <button onClick={() => handleIncreaseItem(data)}>+</button>
           </div>
           <div>
             <span>total</span>

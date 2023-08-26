@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsCartPlusFill } from "react-icons/bs";
 import CartItem from "../components/CartItem";
 import styles from "./Cart.module.css";
@@ -9,9 +9,11 @@ import { clearCart } from "../features/cartSlice";
 function Cart() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleClearCart = () => {
     dispatch(clearCart());
+    navigate("/cart");
   };
 
   return (
@@ -45,7 +47,7 @@ function Cart() {
               <button className={styles.checkout}>Checkout</button>
               <button
                 className={styles.clearCart}
-                onClick={() => handleClearCart}
+                onClick={() => handleClearCart()}
               >
                 Clear Cart
               </button>
