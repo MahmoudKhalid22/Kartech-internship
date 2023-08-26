@@ -1,0 +1,17 @@
+.container h2 {
+  text-align: center;
+}
+.emptyCart {
+  text-align: center;
+}
+
+.shopping {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #994c30;
+  font-size: 1.25rem;
+  font-weight: 600;
+  justify-content: center;
+}

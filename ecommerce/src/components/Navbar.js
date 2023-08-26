@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
@@ -22,7 +23,10 @@ function Navbar() {
           <Link to="/contact">Contact</Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart" className={styles.cart}>
+            <AiOutlineShoppingCart />
+            Cart
+          </Link>
         </li>
       </ul>
       <button

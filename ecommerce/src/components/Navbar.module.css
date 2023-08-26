@@ -30,6 +30,11 @@ nav a {
 nav button {
   display: none;
 }
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 @media (max-width: 767px) {
   nav ul {
     display: flex;
