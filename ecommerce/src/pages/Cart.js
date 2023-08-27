@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { BsCartPlusFill } from "react-icons/bs";
 import CartItem from "../components/CartItem";
 import styles from "./Cart.module.css";
-import { clearCart } from "../features/cartSlice";
+import { clearCart, getTotal } from "../features/cartSlice";
 
 function Cart() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    dispatch(getTotal());
+  }, [cart, dispatch]);
 
   const handleClearCart = () => {
     dispatch(clearCart());

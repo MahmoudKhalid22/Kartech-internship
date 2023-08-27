@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import logo from "../assets/logo.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import styles from "./Navbar.module.css";
 
 function Navbar() {
   const [show, setShow] = useState(false);
+
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
 
   return (
     <nav>
@@ -25,6 +28,7 @@ function Navbar() {
         <li>
           <Link to="/cart" className={styles.cart}>
             <AiOutlineShoppingCart />
+            <span>{cartTotalQuantity}</span>
             Cart
           </Link>
         </li>

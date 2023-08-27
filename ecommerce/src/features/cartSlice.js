@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
-const initialState = {
-  cartItems: localStorage.getItem("cartItem")
-    ? JSON.parse(localStorage.getItem("cartItem"))
-    : [],
-  cartTotalQuantity: 0,
-  cartTotalAmount: 0,
-};
+// const initialState =
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState,
+  initialState: {
+    cartItems: localStorage.getItem("cartItem")
+      ? JSON.parse(localStorage.getItem("cartItem"))
+      : [],
+    cartTotalQuantity: 0,
+    cartTotalAmount: 0,
+  },
   reducers: {
     addToCart(state, action) {
       const productIndex = state.cartItems.findIndex(
@@ -63,16 +63,39 @@ const cartSlice = createSlice({
       localStorage.setItem("cartItem", JSON.stringify(state.cartItems));
     },
 
-    clearCart(action, state) {
+    clearCart(state, action) {
       state.cartItems = [];
-      toast.error(`Cart cleared`, {
+      toast.info(`Cart cleared`, {
         position: "bottom-left",
       });
-      localStorage.setItem("cartItem", JSON.stringify(state.cartItems));
+      localStorage.setItem("cartItem", JSON.stringify([]));
+    },
+
+    getTotal(state, action) {
+      const { cartItems } = state;
+
+      const { total, quantity } = cartItems.reduce(
+        (cartTotal, cartItem) => {
+          const { price, cartQuantity } = cartItem;
+          const itemTotal = price * cartQuantity;
+
+          cartTotal.total += itemTotal;
+          cartTotal.quantity += cartQuantity;
+
+          return cartTotal;
+        },
+        {
+          total: 0,
+          quantity: 0,
+        }
+      );
+
+      state.cartTotalQuantity = quantity;
+      state.cartTotalAmount = total;
     },
   },
 });
 
-export const { addToCart, removeFromCart, decreaseCart, clearCart } =
+export const { addToCart, removeFromCart, decreaseCart, clearCart, getTotal } =
   cartSlice.actions;
 export default cartSlice.reducer;
