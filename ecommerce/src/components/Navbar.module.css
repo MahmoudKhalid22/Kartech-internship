@@ -34,13 +34,26 @@ nav button {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  position: relative;
 }
+.quantity {
+  position: absolute;
+  background-color: #994c30;
+  color: #fff;
+  font-size: 0.65rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  top: -20px;
+  left: -13px;
+}
+
 @media (max-width: 767px) {
   nav ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: -100%;
+    right: 0;
+    transform: translateX(100%);
     top: 40px;
     background-color: #994c30;
     transition: 0.3s;
@@ -54,7 +67,7 @@ nav button {
     color: #fff;
   }
   .showUl {
-    right: 0;
+    transform: translateX(0);
     transition: 0.3s;
   }
   nav button {
@@ -89,5 +102,10 @@ nav button {
   }
   .show span:last-child {
     transform: rotate(-45deg) translateY(-10px);
+  }
+  .quantity {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
   }
 }

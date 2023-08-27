@@ -4,6 +4,7 @@ import styles from "./Products.module.css";
 
 function Products() {
   const { data, error, isLoading } = useGetAllProductsQuery();
+  // console.log(data);
   return (
     <div className={styles.container}>
       {isLoading ? (
@@ -12,7 +13,7 @@ function Products() {
         <h3 className={styles.error}>An error occuered!</h3>
       ) : (
         <div className={styles.products}>
-          {data?.map((product) => (
+          {data.products?.map((product) => (
             <ProductItem product={product} key={product.id} />
           ))}
         </div>

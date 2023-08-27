@@ -22,13 +22,11 @@ function Navbar() {
         <li>
           <Link to="/products">Products</Link>
         </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
+
         <li>
           <Link to="/cart" className={styles.cart}>
             <AiOutlineShoppingCart />
-            <span>{cartTotalQuantity}</span>
+            <span className={styles.quantity}>{cartTotalQuantity}</span>
             Cart
           </Link>
         </li>

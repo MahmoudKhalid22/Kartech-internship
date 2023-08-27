@@ -8,7 +8,9 @@ const initialState = {
 export const productsFetch = createAsyncThunk(
   "products/productsFetch",
   async () => {
-    const response = await fetch("http://localhost:5000/products");
+    const response = await fetch(
+      "https://raw.githubusercontent.com/MahmoudKhalid22/Kartech-internship/main/ecommerce/data/products.json"
+    );
     const data = await response.json();
     return data;
   }

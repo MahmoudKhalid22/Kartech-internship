@@ -12,9 +12,12 @@ function Category() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch(`http://localhost:5000/products/${id}`);
+      const response = await fetch(
+        `https://raw.githubusercontent.com/MahmoudKhalid22/Kartech-internship/main/ecommerce/data/products.json`
+      );
       const data = await response.json();
-      setProduct(data);
+      const selectedProduct = data.products?.find((item) => item.id === id);
+      setProduct(selectedProduct);
     };
     getData();
   }, [id]);
