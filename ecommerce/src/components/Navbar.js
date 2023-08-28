@@ -12,9 +12,12 @@ function Navbar() {
 
   return (
     <nav>
-      <div className={styles.image}>
-        <img src={logo} alt="logo" />
-      </div>
+      <Link to="/">
+        <div className={styles.image}>
+          <img src={logo} alt="logo" />
+          <h3>Blossom Boutique</h3>
+        </div>
+      </Link>
       <ul className={show ? styles.showUl : null}>
         <li>
           <Link to="/">Home</Link>
@@ -27,18 +30,26 @@ function Navbar() {
           <Link to="/cart" className={styles.cart}>
             <AiOutlineShoppingCart />
             <span className={styles.quantity}>{cartTotalQuantity}</span>
-            Cart
           </Link>
         </li>
       </ul>
-      <button
-        className={show ? styles.show : null}
-        onClick={() => setShow((prev) => !prev)}
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div className={styles.cartContainer}>
+        <div>
+          <Link to="/cart" className={styles.cartTwo}>
+            <AiOutlineShoppingCart />
+            <span className={styles.quantity}>{cartTotalQuantity}</span>
+          </Link>
+        </div>
+
+        <button
+          className={show ? styles.show : null}
+          onClick={() => setShow((prev) => !prev)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </nav>
   );
 }

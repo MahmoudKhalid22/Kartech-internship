@@ -2,16 +2,23 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding-top: 1.25rem;
 }
 .product:not(:last-of-type) {
-  border-bottom: 1px solid #994c30;
+  border-bottom: 1px solid #584346;
   padding-bottom: 1.25rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .product img {
   width: 9rem;
+  height: 10rem;
   object-fit: cover;
 }
 .product .remove {
@@ -22,6 +29,7 @@
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
+  width: fit-content;
 }
 .bottom {
   display: flex;
@@ -40,7 +48,7 @@
   cursor: pointer;
   border: none;
   outline: none;
-  background-color: #8a442b;
+  background-color: #664e52;
   color: #fff;
 }
 .btns span {

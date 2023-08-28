@@ -1,3 +1,6 @@
+.container {
+  margin: 2.5rem 1.5rem;
+}
 .loading,
 .error {
   font-size: 2rem;
@@ -16,5 +19,10 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
+}
+@media (max-width: 767px) {
+  .products {
+    gap: 1.5rem;
+  }
 }

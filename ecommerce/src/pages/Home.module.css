@@ -1,14 +1,24 @@
 .container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
+  height: calc(100vh - 5rem);
+  width: 100vw;
+  background-image: url(../assets/bgtwo.webp);
+  background-size: cover;
+  padding: 1.5rem 1rem 0 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
 }
-
-.image {
-  /* flex: 1; */
-  width: 40rem;
-  height: 30rem;
+.container a {
+  display: block;
+  background-color: rgb(146, 112, 117);
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease;
+}
+.container a:hover {
+  background-color: #664e52;
 }
 
 .image img {
@@ -20,28 +30,32 @@
 .description {
   margin-top: 1.5rem;
   width: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  transform: translateY(50%);
   /* flex: 1; */
 }
 .description p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.1;
+  margin-bottom: 2rem;
 }
+
 @media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-  }
-  .image {
-    width: 80%;
-    margin: 0 auto;
-    height: 60%;
-  }
   .description {
     width: 100%;
-    text-align: center;
+
     margin-top: 0;
   }
+
   .description h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    width: 16rem;
+  }
+  .container a {
+    font-size: 0.75rem;
   }
 
   .description p {

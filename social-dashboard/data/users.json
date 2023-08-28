@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "age": 28,
+      "followers": 1500,
+      "posts": [
+        { "id": 101, "content": "Hello from Alice!" },
+        { "id": 102, "content": "A new day has begun." }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "age": 32,
+      "followers": 1200,
+      "posts": [
+        { "id": 201, "content": "Bob's thoughts..." }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "age": 25,
+      "followers": 800,
+      "posts": []
+    },
+    {
+      "id": 4,
+      "name": "David",
+      "age": 29,
+      "followers": 1800,
+      "posts": [
+        { "id": 401, "content": "David's daily update." },
+        { "id": 402, "content": "Something interesting happened." }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Eve",
+      "age": 22,
+      "followers": 950,
+      "posts": []
+    },
+    {
+      "id": 6,
+      "name": "Frank",
+      "age": 35,
+      "followers": 2100,
+      "posts": []
+    },
+    {
+      "id": 7,
+      "name": "Grace",
+      "age": 27,
+      "followers": 1700,
+      "posts": [
+        { "id": 701, "content": "Sharing some thoughts." }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Hannah",
+      "age": 30,
+      "followers": 1100,
+      "posts": []
+    },
+    {
+      "id": 9,
+      "name": "Isaac",
+      "age": 24,
+      "followers": 750,
+      "posts": []
+    },
+    {
+      "id": 10,
+      "name": "Jasmine",
+      "age": 26,
+      "followers": 1400,
+      "posts": [
+        { "id": 1001, "content": "Hello world!" }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import styles from "./Category.module.css";
 import { addToCart } from "../features/cartSlice";
@@ -8,7 +8,6 @@ function Category() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const getData = async () => {
@@ -24,7 +23,6 @@ function Category() {
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));
-    navigate("/cart");
   };
   return (
     <div className={styles.container}>

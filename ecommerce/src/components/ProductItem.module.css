@@ -1,6 +1,6 @@
 .image {
-  width: 20rem;
-  height: 25rem;
+  width: 14rem;
+  height: 15rem;
 }
 .container img {
   width: 100%;
@@ -8,20 +8,23 @@
   object-fit: cover;
 }
 .container {
-  background-color: #ff7f50;
+  background-color: #d3c6c8;
+  padding-bottom: 0.5rem;
 }
 .container a {
   text-decoration: none;
   color: #000;
 }
 .container h4 {
-  margin-left: 1rem;
+  padding-top: 0.25rem;
+  text-align: center;
 }
 .details {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  margin-top: 0.5rem;
 }
 .details .price {
   font-size: 1.25rem;
@@ -34,10 +37,28 @@
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   font-weight: 500;
-  background-color: #4c2618;
+  background-color: #664e52;
   cursor: pointer;
   transition: 0.3s;
 }
 .details button:hover {
-  background-color: #331910;
+  background-color: #49383b;
+}
+@media (max-width: 767px) {
+  .image {
+    width: 9rem;
+    height: 9.5rem;
+  }
+
+  .details button {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+  .container h4 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .details .price {
+    font-size: 0.75rem;
+  }
 }

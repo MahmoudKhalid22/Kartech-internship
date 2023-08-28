@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
-import bg from "../assets/background.jpg";
 
 function Home() {
   return (
@@ -17,9 +16,6 @@ function Home() {
           with the timeless beauty of flowers.
         </p>
         <Link to="/products">Go to Products</Link>
-      </div>
-      <div className={styles.image}>
-        <img src={bg} alt="bg" loading="lazy" />
       </div>
     </div>
   );

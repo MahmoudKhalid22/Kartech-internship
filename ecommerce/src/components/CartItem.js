@@ -18,7 +18,7 @@ function CartItem({ data }) {
   return (
     <div className={styles.product}>
       <img src={data.image} alt={data.name} />
-      <div>
+      <div className={styles.container}>
         <h3>{data.name}</h3>
         <p>{data.description}</p>
         <button className={styles.remove} onClick={() => handleRemove(data)}>

@@ -1,0 +1,28 @@
+.container ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+}
+.container ul li a {
+  width: 28px;
+  height: 28px;
+  color: #ececec98;
+}
+
+.container {
+  background-color: #444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 0.25rem 0;
+  /* position: fixed; */
+
+  /* width: 100%; */
+}
+
+.active {
+  color: #7778ff !important;
+  /* font-size: 20rem; */
+}

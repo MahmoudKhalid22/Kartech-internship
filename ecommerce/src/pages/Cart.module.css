@@ -1,5 +1,9 @@
+.container {
+  margin-top: 2.5rem;
+}
 .container h2 {
   text-align: center;
+  margin-bottom: 2rem;
 }
 .emptyCart {
   text-align: center;
@@ -8,17 +12,18 @@
 .shopping {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   text-decoration: none;
   color: #994c30;
   font-size: 1.25rem;
   font-weight: 600;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .cart {
-  width: 80%;
-  background-color: #f5edea;
+  width: 70%;
+  background-color: #e9e2e3;
   margin: 0 auto;
   padding: 1.5rem;
 }
@@ -45,11 +50,11 @@
   background-color: #f32013;
 }
 .checkout {
-  background-color: #8a442b;
+  background-color: #584346;
   transition: 0.3s;
 }
 .checkout:hover {
-  background-color: #5c2e1d;
+  background-color: #3a2d2f;
 }
 .sum {
   display: flex;
@@ -59,6 +64,12 @@
 }
 .price {
   font-weight: 700;
+}
+
+@media (min-width: 1100px) {
+  .cart {
+    width: 65rem;
+  }
 }
 @media (max-width: 968px) {
   .cartSummery {
