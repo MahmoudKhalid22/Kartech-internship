@@ -1,0 +1,50 @@
+.btn {
+  padding: 0.5rem 1rem;
+  color: #ccc;
+  background-color: #7778ff;
+  border-radius: 7px;
+  margin: 2.5rem auto;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+}
+.container ul {
+  color: #ccc;
+  list-style: none;
+  margin: 0 auto;
+  /* text-align: center; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  color: #ccc;
+  display: block;
+  margin: 1rem auto;
+  cursor: pointer;
+}
+.userBtn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.name img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.active {
+  margin: 0 auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
