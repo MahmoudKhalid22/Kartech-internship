@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useGetAllProductsQuery } from "../features/usersApi";
+import { useSelector } from "react-redux";
 import styles from "./Connection.module.css";
 
 function Connection() {
   const { data, isLoading, isError } = useGetAllProductsQuery();
 
-  const activeUser = JSON.parse(localStorage.getItem("account"));
-  const friends = data?.filter((fri) => fri.id !== activeUser.id);
+  const activeUser = useSelector((state) => state.account);
+  const friends = data?.filter((fri) => fri.id !== activeUser.user.id);
 
   return (
     <div className={styles.container}>

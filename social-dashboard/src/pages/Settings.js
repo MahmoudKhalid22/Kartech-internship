@@ -1,21 +1,25 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { switchUser } from "../features/accountSlice";
 import { useGetAllProductsQuery } from "../features/usersApi";
 import styles from "./Settings.module.css";
 
 function Settings() {
   const [show, setShow] = useState(false);
-  const activeUser = JSON.parse(localStorage.getItem("account"));
-  const [user, setUser] = useState(activeUser);
-  const { isLoading, isError, data } = useGetAllProductsQuery();
+
   const dispatch = useDispatch();
+
+  const activeUser = useSelector((state) => state.account);
+
+  const [user, setUser] = useState(activeUser.user);
+  const { isLoading, isError, data } = useGetAllProductsQuery();
 
   const handleSwitch = (user) => {
     dispatch(switchUser(user));
   };
 
-  const filteredData = data?.filter((user) => user.id !== activeUser.id);
+  const filteredData = data?.filter((user) => user.id !== activeUser.user.id);
+
   return (
     <div className={styles.container}>
       {isLoading ? (

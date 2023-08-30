@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
 
 export const productsFetch = createAsyncThunk("users/usersFetch", async () => {
   const response = await fetch("http://localhost:5000/users");
@@ -15,6 +15,8 @@ export const accountSlice = createSlice({
           name: "Alice",
           age: 28,
           followers: 1500,
+          avatar: "../assets/one.webp",
+          cover: "../assets/cover/ten.jpg",
           posts: [
             {
               id: 101,
@@ -40,8 +42,11 @@ export const accountSlice = createSlice({
       state.user = action.payload;
       localStorage.setItem("account", JSON.stringify(action.payload));
     },
-    publishPost(state, action) {
-      state.posts.push(action.payload);
+    publishPost: (state, action) => {
+      state.user.posts.push(action.payload);
+      let s = current(state);
+      console.log(s.user.posts);
+      localStorage.setItem("account", JSON.stringify({ ...state }));
     },
   },
   extraReducers: {

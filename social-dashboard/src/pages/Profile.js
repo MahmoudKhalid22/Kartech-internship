@@ -46,7 +46,7 @@ function Profile() {
       </div>
       <div className={styles.posts}>
         {data.user.posts?.map((post) => (
-          <div>
+          <div key={post.id}>
             <div className={styles.credentials}>
               <div className={styles.postImg}>
                 <img src={data.user.avatar} alt={data.user.name} />

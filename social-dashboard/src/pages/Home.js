@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useGetAllProductsQuery } from "../features/usersApi";
 import { AiFillLike } from "react-icons/ai";
 import styles from "./Home.module.css";
+import { publishPost } from "../features/accountSlice";
 
 const months = [
   "Jan",
@@ -19,7 +21,26 @@ const months = [
 ];
 
 function Home() {
+  const [value, setValue] = useState({});
+  const dispatch = useDispatch();
   const { data, isLoading, isError } = useGetAllProductsQuery();
+
+  const handleSubmit = (post) => {
+    if (value.content.trim() !== "") {
+      dispatch(publishPost(post));
+      setValue({ ...value, content: "" });
+    }
+  };
+  const getDataTextarea = (e) => {
+    setValue({
+      id: Math.random(),
+      content: e.target.value,
+      dateTime: new Date().toISOString(),
+      likes: 0,
+      comments: 0,
+      shares: 0,
+    });
+  };
 
   return (
     <>
@@ -30,8 +51,19 @@ function Home() {
       ) : (
         <div>
           <form className={styles.form}>
-            <input placeholder="Do you think anything" />
+            <textarea
+              placeholder="Do you think anything"
+              value={value.content}
+              onChange={getDataTextarea}
+            />
           </form>
+          <button
+            className={styles.btn}
+            type="submit"
+            onClick={() => handleSubmit(value)}
+          >
+            Post
+          </button>
           {data?.map((posts) =>
             posts.posts?.flatMap((post) => (
               <div key={post.id} className={styles.container}>
