@@ -1,53 +1,71 @@
 import React from "react";
 import { useGetAllProductsQuery } from "../features/usersApi";
+import { AiFillLike } from "react-icons/ai";
 import styles from "./Home.module.css";
+
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "June",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
 
 function Home() {
   const { data, isLoading, isError } = useGetAllProductsQuery();
-  const posts = data?.map((post) => post.posts);
 
-  const flattenedPosts = posts?.flatMap((posts) => posts);
-  console.log(flattenedPosts);
   return (
-    <div>
+    <>
       {isLoading ? (
-        <h3>loading...</h3>
+        <h4 className="loading">loading...</h4>
       ) : isError ? (
-        <h3>An error occured</h3>
+        <h4 className="error">An error occured</h4>
       ) : (
-        <>
-          <form>
-            {/* <label htmlFor="post">Do </label> */}
+        <div>
+          <form className={styles.form}>
             <input placeholder="Do you think anything" />
           </form>
-          <div>
-            {flattenedPosts?.map((post, index) => (
-              <div key={post.id} className={styles.post}>
+          {data?.map((posts) =>
+            posts.posts?.flatMap((post) => (
+              <div key={post.id} className={styles.container}>
                 <div className={styles.credentials}>
-                  <div>
-                    <div></div>
-                    <p>{post.name}</p>
+                  <div className={styles.avatar}>
+                    <img src={posts.avatar} alt={posts.name} />
                   </div>
                   <div>
-                    <p>{new Date(post.dateTime).getMonth() + 1}</p>
-                    <p>{new Date(post.dateTime).getFullYear()}</p>
-                    <p>{new Date(post.dateTime).getDate()}</p>
+                    <h3>{posts.name}</h3>
+                    <div className={styles.date}>
+                      <p>{months[new Date(post.dateTime).getMonth()]}</p>
+                      <p>{new Date(post.dateTime).getFullYear()}</p>
+                      <p>{new Date(post.dateTime).getDate()}</p>
+                    </div>
                   </div>
                 </div>
-                <div>{post.content}</div>
-                <div>
-                  <div>{post.likes}</div>
+                <div className={styles.posts}>{post.content}</div>
+                <div className={styles.numbers}>
                   <div>
-                    <p>{post.comments}</p>
-                    <p>{post.shares}</p>
+                    <AiFillLike className={styles.icon} />
+                    {post.likes} likes
+                  </div>
+                  <div className={styles.share}>
+                    <p>{post.comments} comments</p>
+                    <p>.</p>
+                    <p>{post.shares} shares</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </>
+            ))
+          )}
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

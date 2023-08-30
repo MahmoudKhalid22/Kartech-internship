@@ -12,6 +12,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(147, 174, 180, 0.37);
 }
+.loading {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: gray;
+}
+.error {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: red;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

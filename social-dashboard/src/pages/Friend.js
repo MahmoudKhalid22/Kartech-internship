@@ -1,7 +1,7 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { AiFillLike } from "react-icons/ai";
-import styles from "./Profile.module.css";
+import styles from "./Friend.module.css";
 
 const months = [
   "Jan",
@@ -18,41 +18,54 @@ const months = [
   "Dec",
 ];
 
-function Profile() {
-  const data = useSelector((state) => state.account);
+function Friend() {
+  const { id } = useParams();
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch("http://localhost:5000/users");
+      const data = await response.json();
+
+      const user = data?.find((user) => user.id.toString() === id.toString());
+      setUser(user);
+    };
+
+    getData();
+  }, [id]);
 
   return (
     <div className={styles.container}>
       <div className={styles.images}>
         <div className={styles.images}>
           <div className={styles.cover}>
-            <img src={data.user.cover} alt={data.user.name} loading="lazy" />
+            <img src={user.cover} alt={user.name} loading="lazy" />
           </div>
           <div className={styles.avatar}>
-            <img src={data.user.avatar} alt={data.user.name} loading="lazy" />
+            <img src={user.avatar} alt={user.name} loading="lazy" />
           </div>
-          <h3 className={styles.name}>{data.user.name}</h3>
+          <h3 className={styles.name}>{user.name}</h3>
         </div>
         <div className={styles.details}>
           <div className={styles.item}>
             <span>age:</span>
-            <p>{data.user.age}</p>
+            <p>{user.age}</p>
           </div>
           <div className={styles.item}>
             <span>followers:</span>
-            <p>{data.user.followers}</p>
+            <p>{user.followers}</p>
           </div>
         </div>
       </div>
       <div className={styles.posts}>
-        {data.user.posts?.map((post) => (
+        {user.posts?.map((post) => (
           <div>
             <div className={styles.credentials}>
               <div className={styles.postImg}>
-                <img src={data.user.avatar} alt={data.user.name} />
+                <img src={user.avatar} alt={user.name} />
               </div>
               <div className={styles.text}>
-                <p>{data.user.name}</p>
+                <p>{user.name}</p>
                 <div className={styles.date}>
                   <p>{months[new Date(post.dateTime).getMonth()]}</p>
                   <p>{new Date(post.dateTime).getFullYear()}</p>
@@ -79,4 +92,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Friend;

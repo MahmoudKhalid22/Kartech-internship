@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Connection from "./pages/Connection";
 import Settings from "./pages/Settings";
+import Friend from "./pages/Friend";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       { path: "profile", element: <Profile /> },
       { path: "connections", element: <Connection /> },
       { path: "settings", element: <Settings /> },
+      { path: "connections/:id", element: <Friend /> },
     ],
   },
 ]);

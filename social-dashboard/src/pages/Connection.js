@@ -12,13 +12,13 @@ function Connection() {
   return (
     <div className={styles.container}>
       {isLoading ? (
-        <h3>loading...</h3>
+        <h3 className="loading">loading...</h3>
       ) : isError ? (
-        <h3>An error occured</h3>
+        <h3 className="error">An error occured</h3>
       ) : (
         <div className={styles["friend-list"]}>
           {friends?.map((fri) => (
-            <Link key={fri.id}>
+            <Link key={fri.id} to={`/connections/${fri.id}`}>
               <div className={styles["friend-card"]}>
                 <img src={fri.avatar} alt={fri.name} />
                 <p>{fri.name}</p>

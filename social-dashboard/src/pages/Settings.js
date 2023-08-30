@@ -19,9 +19,9 @@ function Settings() {
   return (
     <div className={styles.container}>
       {isLoading ? (
-        <h3>Loading...</h3>
+        <h3 className="loading">Loading...</h3>
       ) : isError ? (
-        <h3>An error occured</h3>
+        <h3 className="error">An error occured</h3>
       ) : (
         <>
           <button
