@@ -1,0 +1,138 @@
+.container {
+  margin-top: 1.5rem;
+}
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 100%;
+}
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover {
+  width: 90%;
+  height: 15rem;
+}
+
+.avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  transform: translateY(-2.5rem);
+  margin-left: 5%;
+  margin-right: auto;
+}
+.avatar img {
+  border-radius: 50%;
+}
+.name {
+  margin-right: auto;
+  margin-left: 5%;
+  transform: translateY(-2rem);
+}
+.details {
+  transform: translateY(-2rem);
+  margin-right: auto;
+  margin-left: 5%;
+  /* width: 100%; */
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.posts {
+  margin-left: 5%;
+}
+
+.credentials {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+/* .postImg {
+  width: 2rem;
+  height: 2rem;
+} */
+/* .postImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+} */
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.share {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* styles.css or your preferred CSS file */
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.posts > div {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1.25rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.postImg img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.text {
+  margin-top: 5px;
+}
+.text p {
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.date p {
+  font-size: 7px;
+  color: gray;
+  margin-top: 2px;
+}
+
+.numbers div {
+  font-size: 14px;
+  color: gray;
+}
+
+.share p {
+  color: gray;
+}
+
+.share span {
+  color: gray;
+}
+.content {
+  margin: 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.178);
+}
+.icon {
+  color: #5555ff;
+}

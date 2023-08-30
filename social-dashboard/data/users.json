@@ -6,6 +6,8 @@
       "age": 20,
       "followers": 1500,
       "avatar": "../assets/one.webp",
+      "cover": "../assets/cover/ten.jpg",
+
       "posts": [
         {
           "id": 101,
@@ -31,6 +33,7 @@
       "age": 32,
       "followers": 1200,
       "avatar": "../assets/two.webp",
+      "cover": "../assets/cover/nine.jpg",
       "posts": [
         {
           "id": 201,
@@ -48,6 +51,7 @@
       "age": 25,
       "followers": 800,
       "avatar": "../assets/three.webp",
+      "cover": "../assets/cover/eight.jpg",
       "posts": []
     },
     {
@@ -56,6 +60,7 @@
       "age": 29,
       "followers": 1800,
       "avatar": "../assets/four.webp",
+      "cover": "../assets/cover/seven.jpg",
       "posts": [
         {
           "id": 401,
@@ -81,6 +86,7 @@
       "age": 22,
       "followers": 950,
       "avatar": "../assets/five.webp",
+      "cover": "../assets/cover/six.jpg",
       "posts": []
     },
     {
@@ -89,6 +95,7 @@
       "age": 35,
       "followers": 2100,
       "avatar": "../assets/six.webp",
+      "cover": "../assets/cover/five.jpg",
       "posts": []
     },
     {
@@ -97,6 +104,7 @@
       "age": 27,
       "followers": 1700,
       "avatar": "../assets/seven.webp",
+      "cover": "../assets/cover/four.jpg",
       "posts": [
         {
           "id": 701,
@@ -114,6 +122,7 @@
       "age": 30,
       "followers": 1100,
       "avatar": "../assets/eight.webp",
+      "cover": "../assets/cover/three.jpg",
       "posts": []
     },
     {
@@ -121,7 +130,8 @@
       "name": "Isaac",
       "age": 24,
       "followers": 750,
-      "avatar": "../assets/nine.jpeg",
+      "avatar": "../assets/nine.jpg",
+      "cover": "../assets/cover/one.jpg",
       "posts": []
     },
     {
@@ -129,7 +139,8 @@
       "name": "Mohammed",
       "age": 26,
       "followers": 1400,
-      "avatar": "../assets/ten.png",
+      "avatar": "../assets/ten.webp",
+      "cover": "../assets/cover/two.jpg",
       "posts": [
         {
           "id": 1001,

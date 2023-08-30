@@ -1,0 +1,61 @@
+/* styles.css or your preferred CSS file */
+
+/* Styles for the container */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Loading and error styles */
+.container h3 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container h3.error {
+  color: red;
+}
+
+/* Friend list container */
+.friend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Friend card style */
+.friend-card {
+  width: 200px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.friend-card:hover {
+  transform: scale(1.05);
+}
+
+.friend-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.friend-card p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.container a {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  margin: 10px 0;
+}

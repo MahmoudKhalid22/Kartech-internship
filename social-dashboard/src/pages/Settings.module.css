@@ -7,6 +7,8 @@
   text-align: center;
   display: block;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 .container ul {
   color: #ccc;
@@ -31,8 +33,8 @@
   cursor: pointer;
 }
 .name img {
-  width: 3rem;
-  height: 3rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
 }
 .active {
@@ -44,7 +46,7 @@
   justify-content: center;
 }
 .active img {
-  width: 3rem;
-  height: 3rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
 }
