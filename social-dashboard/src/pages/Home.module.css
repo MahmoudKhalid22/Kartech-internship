@@ -146,3 +146,21 @@
 .icon {
   color: #5555ff;
 }
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+  .form {
+    width: 90%;
+    height: 12rem;
+  }
+
+  .form textarea {
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+  .btn {
+    margin-right: 5%;
+  }
+}

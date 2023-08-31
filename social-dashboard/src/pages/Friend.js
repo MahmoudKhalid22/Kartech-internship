@@ -29,7 +29,9 @@ function Friend() {
       );
       const data = await response.json();
 
-      const user = data.users?.find((user) => user.id.toString() === id.toString());
+      const user = data.users?.find(
+        (user) => user.id.toString() === id.toString()
+      );
       setUser(user);
     };
 
@@ -56,6 +58,10 @@ function Friend() {
           <div className={styles.item}>
             <span>followers:</span>
             <p>{user.followers}</p>
+          </div>
+          <div className={styles.item}>
+            <span>career:</span>
+            <p>{user.career}</p>
           </div>
         </div>
       </div>

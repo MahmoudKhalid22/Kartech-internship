@@ -1,5 +1,6 @@
 .container {
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .images {
   display: flex;
@@ -16,7 +17,7 @@
 
 .cover {
   width: 90%;
-  height: 15rem;
+  height: 30rem;
 }
 
 .avatar {
@@ -44,9 +45,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-.posts {
-  margin-left: 5%;
 }
 
 .credentials {
@@ -126,4 +124,12 @@
 }
 .icon {
   color: #5555ff;
+}
+@media (max-width: 767px) {
+  .cover {
+    height: 20rem;
+  }
+  .posts > div {
+    width: 95%;
+  }
 }
