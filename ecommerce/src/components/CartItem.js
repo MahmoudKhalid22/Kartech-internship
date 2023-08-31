@@ -14,7 +14,6 @@ function CartItem({ data }) {
   const handleIncreaseItem = (product) => {
     dispatch(addToCart(product));
   };
-
   return (
     <div className={styles.product}>
       <img src={data.image} alt={data.name} />

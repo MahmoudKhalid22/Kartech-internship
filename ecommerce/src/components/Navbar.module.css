@@ -42,16 +42,21 @@ nav button {
   align-items: center;
   gap: 0.25rem;
   position: relative;
+  font-size: 1.5rem;
 }
 .quantity {
   position: absolute;
   background-color: #584346;
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 1rem;
   border-radius: 50%;
-  padding: 0.5rem;
-  top: -20px;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -15px;
   left: -13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .cartContainer {
   display: none;
@@ -72,10 +77,11 @@ nav button {
     width: 8rem;
     height: 20rem;
     justify-content: flex-start;
+    z-index: 55;
   }
   nav ul li a {
     font-weight: normal;
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .cart {
     display: none;
@@ -91,6 +97,7 @@ nav button {
     align-items: center;
     gap: 0.25rem;
     position: relative;
+    font-size: 1.75rem;
   }
   nav ul li > a {
     color: #fff;

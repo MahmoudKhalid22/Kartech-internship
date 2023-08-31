@@ -8,8 +8,10 @@ import styles from "./Navbar.module.css";
 function Navbar() {
   const [show, setShow] = useState(false);
 
-  const { cartTotalQuantity } = useSelector((state) => state.cart);
-
+  const cart = useSelector((state) => state.cart);
+  // const test = JSON.parse(localStorage.getItem("cartItem"));
+  console.log(cart);
+  // console.log(test);
   return (
     <nav>
       <Link to="/">
@@ -29,7 +31,9 @@ function Navbar() {
         <li>
           <Link to="/cart" className={styles.cart}>
             <AiOutlineShoppingCart />
-            <span className={styles.quantity}>{cartTotalQuantity}</span>
+            <span className={styles.quantity}>
+              {cart.cartTotalQuantity ? cart.cartTotalQuantity : 0}
+            </span>
           </Link>
         </li>
       </ul>
@@ -37,7 +41,9 @@ function Navbar() {
         <div>
           <Link to="/cart" className={styles.cartTwo}>
             <AiOutlineShoppingCart />
-            <span className={styles.quantity}>{cartTotalQuantity}</span>
+            <span className={styles.quantity}>
+              {cart.cartTotalQuantity ? cart.cartTotalQuantity : 0}
+            </span>
           </Link>
         </div>
 
