@@ -6,7 +6,7 @@
       "age": 20,
       "followers": 1500,
       "avatar": "../assets/one.webp",
-      "cover": "../assets/cover/ten.jpg",
+      "cover": "../assets/cover/one.jpg",
       "career": "Farmer",
 
       "posts": [
@@ -34,7 +34,7 @@
       "age": 32,
       "followers": 1200,
       "avatar": "../assets/two.webp",
-      "cover": "../assets/cover/nine.jpg",
+      "cover": "../assets/cover/two.jpg",
       "career": "Embedded System Engineer",
       "posts": [
         {
@@ -53,7 +53,7 @@
       "age": 25,
       "followers": 800,
       "avatar": "../assets/three.webp",
-      "cover": "../assets/cover/eight.jpg",
+      "cover": "../assets/cover/three.jpg",
       "career": "Captian kung fu",
       "posts": [
         {
@@ -72,7 +72,7 @@
       "age": 29,
       "followers": 1800,
       "avatar": "../assets/four.webp",
-      "cover": "../assets/cover/seven.jpg",
+      "cover": "../assets/cover/four.jpg",
       "career": "Physics scientist",
       "posts": [
         {
@@ -99,7 +99,7 @@
       "age": 22,
       "followers": 950,
       "avatar": "../assets/five.webp",
-      "cover": "../assets/cover/six.jpg",
+      "cover": "../assets/cover/five.jpg",
       "career": "Cyber Security",
       "posts": [
         {
@@ -118,7 +118,7 @@
       "age": 35,
       "followers": 2100,
       "avatar": "../assets/six.webp",
-      "cover": "../assets/cover/five.jpg",
+      "cover": "../assets/cover/six.jpg",
       "career": "Doctor",
       "posts": [
         {
@@ -137,7 +137,7 @@
       "age": 27,
       "followers": 1700,
       "avatar": "../assets/seven.webp",
-      "cover": "../assets/cover/four.jpg",
+      "cover": "../assets/cover/seven.jpg",
       "career": "Quantum Computer Engineer",
       "posts": [
         {
@@ -156,7 +156,7 @@
       "age": 30,
       "followers": 1100,
       "avatar": "../assets/eight.webp",
-      "cover": "../assets/cover/three.jpg",
+      "cover": "../assets/cover/eight.jpg",
       "career": "Software Engineer",
       "posts": [
         {
@@ -175,7 +175,7 @@
       "age": 24,
       "followers": 750,
       "avatar": "../assets/nine.jpg",
-      "cover": "../assets/cover/one.jpg",
+      "cover": "../assets/cover/nine.jpg",
       "career": "Ai Engineer",
       "posts": [
         {
@@ -194,7 +194,7 @@
       "age": 26,
       "followers": 1400,
       "avatar": "../assets/ten.webp",
-      "cover": "../assets/cover/two.jpg",
+      "cover": "../assets/cover/ten.jpg",
       "career": "Teacher",
       "posts": [
         {
