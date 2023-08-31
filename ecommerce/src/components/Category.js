@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./Category.module.css";
-import { addToCart } from "../features/cartSlice";
+import { addToCart, getTotal } from "../features/cartSlice";
 
 function Category() {
   const { id } = useParams();
   const [product, setProduct] = useState({});
   const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
 
   useEffect(() => {
     const getData = async () => {
@@ -20,6 +22,10 @@ function Category() {
     };
     getData();
   }, [id]);
+
+  useEffect(() => {
+    dispatch(getTotal());
+  }, [cart, dispatch]);
 
   const handleAddToCart = (product) => {
     dispatch(addToCart(product));

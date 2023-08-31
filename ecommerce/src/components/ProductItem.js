@@ -7,6 +7,8 @@ import styles from "./ProductItem.module.css";
 function ProductItem({ product }) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
+
+  
   useEffect(() => {
     dispatch(getTotal());
   }, [cart, dispatch]);

@@ -9,9 +9,7 @@ function Navbar() {
   const [show, setShow] = useState(false);
 
   const cart = useSelector((state) => state.cart);
-  // const test = JSON.parse(localStorage.getItem("cartItem"));
-  console.log(cart);
-  // console.log(test);
+
   return (
     <nav>
       <Link to="/">
