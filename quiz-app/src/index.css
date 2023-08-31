@@ -58,7 +58,7 @@ body {
   border-radius: 100px;
 }
 
-img {
+header img {
   width: 14rem;
 }
 
@@ -285,4 +285,18 @@ footer {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+@media (max-width: 767px) {
+  .progress {
+    width: 80%;
+  }
+  header img {
+    width: 9rem;
+  }
+  .title {
+    font-size: 2.25rem;
+  }
+  .btn-option {
+    width: 85%;
+  }
 }
