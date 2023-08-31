@@ -18,7 +18,9 @@ function Settings() {
     dispatch(switchUser(user));
   };
 
-  const filteredData = data?.filter((user) => user.id !== activeUser.user.id);
+  const filteredData = data.users?.filter(
+    (user) => user.id !== activeUser.user.id
+  );
 
   return (
     <div className={styles.container}>

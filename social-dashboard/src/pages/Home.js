@@ -24,7 +24,7 @@ function Home() {
   const [value, setValue] = useState({});
   const dispatch = useDispatch();
   const { data, isLoading, isError } = useGetAllProductsQuery();
-
+  console.log(data);
   const handleSubmit = (post) => {
     if (value.content.trim() !== "") {
       dispatch(publishPost(post));
@@ -64,7 +64,7 @@ function Home() {
           >
             Post
           </button>
-          {data?.map((posts) =>
+          {data.users?.map((posts) =>
             posts.posts?.flatMap((post) => (
               <div key={post.id} className={styles.container}>
                 <div className={styles.credentials}>

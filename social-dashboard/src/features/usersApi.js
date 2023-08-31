@@ -3,11 +3,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const usersApi = createApi({
   reducerPath: "usersApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
+    baseUrl:
+      "https://raw.githubusercontent.com/MahmoudKhalid22/Kartech-internship/main/social-dashboard/data/",
   }),
   endpoints: (builder) => ({
     getAllProducts: builder.query({
-      query: () => "users",
+      query: () => "users.json",
     }),
   }),
 });

@@ -24,10 +24,12 @@ function Friend() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch("http://localhost:5000/users");
+      const response = await fetch(
+        "https://raw.githubusercontent.com/MahmoudKhalid22/Kartech-internship/main/social-dashboard/data/users.json"
+      );
       const data = await response.json();
 
-      const user = data?.find((user) => user.id.toString() === id.toString());
+      const user = data.users?.find((user) => user.id.toString() === id.toString());
       setUser(user);
     };
 

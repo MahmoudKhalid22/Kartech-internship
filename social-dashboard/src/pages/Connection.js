@@ -8,7 +8,7 @@ function Connection() {
   const { data, isLoading, isError } = useGetAllProductsQuery();
 
   const activeUser = useSelector((state) => state.account);
-  const friends = data?.filter((fri) => fri.id !== activeUser.user.id);
+  const friends = data.users?.filter((fri) => fri.id !== activeUser.user.id);
 
   return (
     <div className={styles.container}>

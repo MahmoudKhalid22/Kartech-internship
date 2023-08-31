@@ -1,7 +1,9 @@
 import { createSlice, createAsyncThunk, current } from "@reduxjs/toolkit";
 
 export const productsFetch = createAsyncThunk("users/usersFetch", async () => {
-  const response = await fetch("http://localhost:5000/users");
+  const response = await fetch(
+    "https://raw.githubusercontent.com/MahmoudKhalid22/Kartech-internship/main/social-dashboard/data/users.json"
+  );
   return await response.json();
 });
 
@@ -17,24 +19,26 @@ export const accountSlice = createSlice({
           followers: 1500,
           avatar: "../assets/one.webp",
           cover: "../assets/cover/ten.jpg",
-          posts: [
-            {
-              id: 101,
-              content: "Hello from Alice!",
-              likes: 50,
-              comments: 10,
-              shares: 5,
-              dateTime: "2023-08-27T10:00:00Z",
-            },
-            {
-              id: 102,
-              content: "A new day has begun.",
-              likes: 30,
-              comments: 8,
-              shares: 3,
-              dateTime: "2023-08-27T14:30:00Z",
-            },
-          ],
+          posts: localStorage.getItem("posts")
+            ? JSON.parse(localStorage.getItem("posts"))
+            : [
+                {
+                  id: 101,
+                  content: "Hello from Alice!",
+                  likes: 50,
+                  comments: 10,
+                  shares: 5,
+                  dateTime: "2023-08-27T10:00:00Z",
+                },
+                {
+                  id: 102,
+                  content: "A new day has begun.",
+                  likes: 30,
+                  comments: 8,
+                  shares: 3,
+                  dateTime: "2023-08-27T14:30:00Z",
+                },
+              ],
         },
   },
   reducers: {
@@ -46,7 +50,7 @@ export const accountSlice = createSlice({
       state.user.posts.push(action.payload);
       let s = current(state);
       console.log(s.user.posts);
-      localStorage.setItem("account", JSON.stringify({ ...state }));
+      localStorage.setItem("posts", JSON.stringify({ ...state }));
     },
   },
   extraReducers: {

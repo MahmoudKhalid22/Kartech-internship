@@ -7,11 +7,12 @@
       "followers": 1500,
       "avatar": "../assets/one.webp",
       "cover": "../assets/cover/ten.jpg",
+      "career": "Farmer",
 
       "posts": [
         {
           "id": 101,
-          "content": "Hello from Alice!",
+          "content": "Hey fellow farmers! 🌱 Today, let's discuss some innovative techniques for sustainable agriculture. From vertical farming to precision irrigation, there are countless ways to maximize crop yield while minimizing environmental impact. Let's share our experiences and insights on embracing technology to make our farms more efficient and eco-friendly. Together, we can cultivate a greener future for agriculture!",
           "likes": 50,
           "comments": 10,
           "shares": 5,
@@ -34,10 +35,11 @@
       "followers": 1200,
       "avatar": "../assets/two.webp",
       "cover": "../assets/cover/nine.jpg",
+      "career": "Embedded System Engineer",
       "posts": [
         {
           "id": 201,
-          "content": "Bob's thoughts...",
+          "content": "Hey, tech explorers! 🛠️ Let's dive into the heart of technology – embedded systems. Whether you're passionate about IoT devices, robotics, or real-time operating systems, this is the place to discuss hardware-software integration, optimization techniques, and the future of embedded systems. Let's collaborate on projects, troubleshoot challenges, and celebrate the hidden heroes powering modern innovation!",
           "likes": 20,
           "comments": 5,
           "shares": 2,
@@ -52,7 +54,17 @@
       "followers": 800,
       "avatar": "../assets/three.webp",
       "cover": "../assets/cover/eight.jpg",
-      "posts": []
+      "career": "Captian kung fu",
+      "posts": [
+        {
+          "id": 301,
+          "content": "Greetings, martial artists! 🥋 Let's gather to celebrate our shared passion for Kung Fu. Whether you're training in Wing Chun, Tai Chi, or Shaolin, this is the place to exchange tips on form, technique, and discipline. Share your personal journey, recommend training regimens, and discuss the philosophy behind Kung Fu. Remember, it's not just about physical prowess, but also cultivating a balanced mind and body. Keep those kicks flying high!",
+          "likes": 50,
+          "comments": 12,
+          "shares": 5,
+          "dateTime": "2023-06-27T13:15:00Z"
+        }
+      ]
     },
     {
       "id": 4,
@@ -61,10 +73,11 @@
       "followers": 1800,
       "avatar": "../assets/four.webp",
       "cover": "../assets/cover/seven.jpg",
+      "career": "Physics scientist",
       "posts": [
         {
           "id": 401,
-          "content": "David's daily update.",
+          "content": "Greetings, fellow experimenters! 🌡️🔬 Join me in the quest for knowledge at the edge of the observable. Let's discuss our experiences designing and conducting experiments that unlock the mysteries of the universe. Whether you're probing the depths of particle interactions or pushing the limits of quantum entanglement, this is where the excitement of discovery lives. Share your challenges, breakthroughs, and that moment when everything falls into place!",
           "likes": 40,
           "comments": 7,
           "shares": 3,
@@ -72,7 +85,7 @@
         },
         {
           "id": 402,
-          "content": "Something interesting happened.",
+          "content": "Hello fellow theorists! 👋 Let's embark on a journey through the cosmos of theoretical physics. From the intricate dance of particles in the Standard Model to the mind-bending landscapes of string theory and multiverses, this is our playground of ideas. Share your latest hypotheses, discuss mathematical elegance, and ponder the nature of reality itself. Together, we're explorers of the unseen and dreamers of the impossible.",
           "likes": 60,
           "comments": 12,
           "shares": 6,
@@ -87,7 +100,17 @@
       "followers": 950,
       "avatar": "../assets/five.webp",
       "cover": "../assets/cover/six.jpg",
-      "posts": []
+      "career": "Cyber Security",
+      "posts": [
+        {
+          "id": 501,
+          "content": "Let's dive deep into the world of cybersecurity and ethical hacking. Share your experiences in identifying vulnerabilities, discuss the latest trends in cyber threats, and exchange insights on protecting digital assets. Remember, with great power comes great responsibility – let's keep the digital landscape safe and secure for everyone. Knowledge is power, and together, we're an unstoppable force against cybercrime!",
+          "likes": 60,
+          "comments": 12,
+          "shares": 6,
+          "dateTime": "2023-08-27T18:20:00Z"
+        }
+      ]
     },
     {
       "id": 6,
@@ -96,7 +119,17 @@
       "followers": 2100,
       "avatar": "../assets/six.webp",
       "cover": "../assets/cover/five.jpg",
-      "posts": []
+      "career": "Doctor",
+      "posts": [
+        {
+          "id": 601,
+          "content": "Hello medical minds! 👩‍⚕️👨‍⚕️ Join me in a discussion about the latest advancements and challenges in the medical field. From cutting-edge treatments to patient care strategies, let's share our insights and discoveries. This is a space for collaboration, where we can learn from each other's experiences and work towards enhancing healthcare outcomes. Together, we can make a meaningful difference in the lives of our patients.",
+          "likes": 60,
+          "comments": 12,
+          "shares": 6,
+          "dateTime": "2023-08-27T18:20:00Z"
+        }
+      ]
     },
     {
       "id": 7,
@@ -105,10 +138,11 @@
       "followers": 1700,
       "avatar": "../assets/seven.webp",
       "cover": "../assets/cover/four.jpg",
+      "career": "Quantum Computer Engineer",
       "posts": [
         {
           "id": 701,
-          "content": "Sharing some thoughts.",
+          "content": "Ready to explore the mind-boggling realm of quantum computing? Let's delve into the principles of superposition and entanglement that power these groundbreaking machines. Share your favorite resources, discuss quantum algorithms, and debate the potential impact on cryptography and optimization. Whether you're a novice or a seasoned pro, let's ride the quantum wave together! 🚀🔬",
           "likes": 15,
           "comments": 3,
           "shares": 1,
@@ -123,7 +157,17 @@
       "followers": 1100,
       "avatar": "../assets/eight.webp",
       "cover": "../assets/cover/three.jpg",
-      "posts": []
+      "career": "Software Engineer",
+      "posts": [
+        {
+          "id": 801,
+          "content": "Hey there, code crafters! 💻 Let's embark on a journey through the realm of software engineering. From best practices in coding to tackling complex algorithms, this is the place to exchange ideas and troubleshoot challenges. Whether you're a backend guru or a frontend artist, we're all united by our love for clean code and elegant solutions. Let's debug, compile, and create magic together!",
+          "likes": 15,
+          "comments": 3,
+          "shares": 1,
+          "dateTime": "2023-08-27T09:30:00Z"
+        }
+      ]
     },
     {
       "id": 9,
@@ -132,7 +176,17 @@
       "followers": 750,
       "avatar": "../assets/nine.jpg",
       "cover": "../assets/cover/one.jpg",
-      "posts": []
+      "career": "Ai Engineer",
+      "posts": [
+        {
+          "id": 901,
+          "content": "Greetings, AI aficionados! 🤖 Join me in discussing the latest breakthroughs and ethical considerations in the field of artificial intelligence. From machine learning to neural networks, let's share our experiences in creating intelligent systems that shape the world around us. Whether you're working on natural language processing or computer vision, your insights are invaluable in advancing the AI frontier.",
+          "likes": 15,
+          "comments": 3,
+          "shares": 1,
+          "dateTime": "2023-08-27T09:30:00Z"
+        }
+      ]
     },
     {
       "id": 10,
@@ -141,10 +195,11 @@
       "followers": 1400,
       "avatar": "../assets/ten.webp",
       "cover": "../assets/cover/two.jpg",
+      "career": "Teacher",
       "posts": [
         {
           "id": 1001,
-          "content": "Hello world!",
+          "content": "Hello fellow educators! 👩‍🏫👨‍🏫 Let's come together to celebrate the noble profession of teaching. Share your strategies for engaging students, managing classrooms, and fostering a love for learning. Whether you teach in a traditional setting or are exploring innovative e-learning platforms, your experiences matter. Join the discussion on the evolving landscape of education and the impact we make on future generations.",
           "likes": 25,
           "comments": 4,
           "shares": 2,
