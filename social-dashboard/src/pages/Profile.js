@@ -42,6 +42,10 @@ function Profile() {
             <span>followers:</span>
             <p>{data.user.followers}</p>
           </div>
+          <div className={styles.item}>
+            <span>career:</span>
+            <p>{data.user.career}</p>
+          </div>
         </div>
       </div>
       <div className={styles.posts}>
