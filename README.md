@@ -41,8 +41,8 @@ Feel free to explore and interact with each project to get a better understandin
 
 ### Project 1 - Flower Ecommerce
 #### Prerequisites:
-* Node.js (Version X.X.X)
-* npm (Version X.X.X)
+* Node.js 
+* npm 
 
 #### Installation:
 * Clone the repository to your local machine.
@@ -65,8 +65,8 @@ Feel free to explore and interact with each project to get a better understandin
 
 ### Project 3 - Quiz App
 #### Prerequisites:
-* Node.js (Version X.X.X)
-* npm (Version X.X.X)
+* Node.js 
+* npm 
   
 #### Installation:
 * Clone the repository to your local machine.
