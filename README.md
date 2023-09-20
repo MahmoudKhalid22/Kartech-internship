@@ -53,8 +53,8 @@ Feel free to explore and interact with each project to get a better understandin
 
 ### Project 2 - Social Dashboard
 #### Prerequisites:
-* Node.js (Version X.X.X)
-* npm (Version X.X.X)
+* Node.js 
+* npm 
 
 #### Installation:
 * Clone the repository to your local machine.
