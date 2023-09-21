@@ -82,10 +82,6 @@ During my internship with Kartech, I had the opportunity to acquire valuable ski
 1. **Self-Directed Learning:** Actively seeking and exploring new topics and resources to adapt to new technologies and approaches independently.
 2. **Redux State Management:** Proficiency in centralizing and managing application state using Redux, enabling the creation of robust and scalable applications.
 3. **Problem-Solving and Debugging:** Honing skills in identifying issues, analyzing root causes, and implementing effective solutions efficiently.
-4. **Collaboration and Communication:** Enhancing teamwork and effective communication in a collaborative environment with team members and stakeholders.
-5. **Documentation and Knowledge Sharing:** Diligently documenting code, project setups, and usage instructions to facilitate knowledge sharing and onboarding.
-
-These skills collectively enriched my internship experience, empowering me to contribute effectively to projects and adapt to evolving technology landscapes.
 
 ## Future Growth
 I view my internship experience as a stepping stone to further growth and improvement. I am committed to continuing my journey as a developer, 
@@ -95,4 +91,4 @@ expanding my skill set, and tackling new challenges.
 The Internship Projects Repository represents the skills I've gained and the projects I've completed during my time I am grateful for the opportunity to learn and contribute,
 and I look forward to applying my knowledge in future endeavors.
 
-Thank you for taking the time to explore my work.
+![certificate](https://imgtr.ee/image/5vOxX)
