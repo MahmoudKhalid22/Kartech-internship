@@ -91,4 +91,4 @@ expanding my skill set, and tackling new challenges.
 The Internship Projects Repository represents the skills I've gained and the projects I've completed during my time I am grateful for the opportunity to learn and contribute,
 and I look forward to applying my knowledge in future endeavors.
 
-![certificate](https://imgtr.ee/image/5vOxX)
+![certificate](https://github.com/MahmoudKhalid22/Kartech-internship/blob/main/Mahmoud%20Khalid%20Omar%20.jpg)
