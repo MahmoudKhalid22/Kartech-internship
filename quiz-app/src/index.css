@@ -300,3 +300,10 @@ footer {
     width: 85%;
   }
 }
+@media (min-width: 767px) {
+  footer {
+    width: 60rem;
+    display: block;
+    margin: 0 auto;
+  }
+}
